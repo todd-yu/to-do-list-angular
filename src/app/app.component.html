@@ -1,0 +1,9 @@
+<app-header (commandSelected)="onNavigate($event)"></app-header>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <app-tasks id="tasks-component" *ngIf="currState === 'task'"></app-tasks>
+      <app-to-do-list id="to-do-list-component" *ngIf="currState === 'toDoList'"></app-to-do-list>
+    </div>
+  </div>
+</div>

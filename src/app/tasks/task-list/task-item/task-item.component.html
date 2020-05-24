@@ -1,0 +1,16 @@
+<a 
+    href="#" 
+    class="list-group-item clearfix" 
+    (click)="onClick()">
+    <div class="pull-left">
+        <h4 class="list-group-item-heading">{{ task.name }}</h4>
+        <p class="list-group-item-text">{{ task.description }}</p>
+    </div>
+    <span class="pull-right">
+        <img 
+        src="{{ task.imagePath }}" 
+        alt="{{ task.name }}" 
+        class="img-responsive" 
+        style="max-height: 50px">
+    </span>
+</a>

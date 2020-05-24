@@ -1,0 +1,14 @@
+<div class="row">
+    <div class="col-md-5">
+        <app-task-list
+        (taskWasSelected)="selectedTask = $event"></app-task-list>
+    </div>
+    <div id="task-detail" class="col-md-7">
+        <app-task-detail
+        *ngIf="selectedTask; else elseCase"
+        [task]="selectedTask"></app-task-detail>
+        <ng-template #elseCase>
+            <p>Please select a Task</p>
+        </ng-template>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="col-xs-12">
+        <button class="btn btn-success">New Task</button>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-xs-12">
+        <!-- NGFor -->
+        <app-task-item
+        *ngFor="let taskElement of tasks"
+        [task]="taskElement"
+        (taskSelected)="onTaskSelected(taskElement)"></app-task-item>
+    </div>
+</div>
+
